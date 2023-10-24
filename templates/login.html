@@ -1,0 +1,19 @@
+{% extends 'modelo.html' %}
+{% block conteudo %}
+<div id="login">
+    {% if msg %}
+        <h2 class="msgerro">{{ msg }}</h2>
+    {% endif %}
+    <form action="/acesso" method="post">
+        <h2>Acesso do dono do Blog:</h2>
+        <label>Usuário:</label><br>
+        <input type="text" name="usuario" id="usuario" required>
+        <br>
+        <label>Senha:</label><br>
+        <input type="password" name="senha" id="senha" required>
+        <br>
+        <input type="submit" value="ACESSO" name="ACESSO" class="bt_adm">
+    </form>
+
+</div>
+{% endblock %}
